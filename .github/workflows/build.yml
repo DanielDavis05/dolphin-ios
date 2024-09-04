@@ -26,8 +26,12 @@ jobs:
 
       - name: Install Build Utilities
         run: |
-          brew install cmake ninja bartycrouch
+          brew update
+          brew install cmake
+          brew install ninja
+          brew install bartycrouch
           /usr/bin/python3 -m pip install polib
+    
 
       - name: Build Application
         run: |
